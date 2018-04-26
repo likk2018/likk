@@ -1,4 +1,0 @@
-spring.jpa.hibernate.ddl-auto=create
-spring.datasource.url=jdbc:mysql://58e315f943d6f.gz.cdb.myqcloud.com:7987/mini?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false
-spring.datasource.username=root
-spring.datasource.password=txg*&0206
