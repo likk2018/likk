@@ -6,7 +6,13 @@ function getNoDataHtml() {
 	var html = '<div style="font-size:0.75rem;text-align:center;clear:both;margin:1rem 0;padding:0;height:19.3rem;">' + $.noDataFond + '</div>';
 	return html;
 }
-
+$(function(){
+	var backgroundMusic = document.createElement('AUDIO');
+	backgroundMusic.setAttribute('autoplay',true);
+	backgroundMusic.setAttribute('loop',true);
+	backgroundMusic.setAttribute('src','resources/music/music.mp3');
+	document.body.appendChild(backgroundMusic);
+})
 function IsPC() {
 	var userAgentInfo = navigator.userAgent;
 	var Agents = ["Android", "iPhone",
