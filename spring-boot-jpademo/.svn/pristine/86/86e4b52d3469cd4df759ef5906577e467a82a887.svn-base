@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>摩方-个性化</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Expires" content="0">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+
+    <meta name="viewport" id="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="full-screen" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="resources/css/com.css?t=111">
+    <script type="text/javascript" src="resources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="resources/js/common/common.js?t=vvv1"></script>
+    <script type="text/javascript" src="resources/js/login/loginverify.js?t=12222"></script>
+    <style>
+    html,body{
+    	margin: 0 auto;
+    	padding: 0;
+    	width: 100%;
+    }
+    .container{
+    	width: 100%;
+    	height:100%;
+    	position: relative;
+    	background: url(resources/imgs/board.png) center center no-repeat;
+    	background-size: 100% 100%;
+    	max-width: 520px;
+    	min-width: 300px;
+    	margin: 0 auto;
+    }
+ 	.container .img-btn{
+ 		display: block;
+ 		width: 1.3rem;
+ 		height: 1.5rem;
+ 		padding-left: .2rem;
+ 		margin-top: .3rem;
+ 	}
+ 	.container #c1{
+ 		padding-top: .5rem;
+ 		margin-top: 0px;
+ 	}
+ 	#redo{
+ 		position: fixed;
+ 		top: 1rem;
+ 		right: .3rem;
+ 		width: 1.5rem;
+ 		height: 1rem;
+ 		display: none;
+ 	}
+ 	#road{
+ 		position: fixed;
+ 		top: 4rem;
+ 		right: .2rem;
+ 		width: 1.8rem;
+ 		height: 3.2rem;
+ 	}
+ 	/*#logos{
+ 		position: fixed;
+ 		top: 1.3rem;
+ 		left: 1.3rem;
+ 		width: 4.9rem;
+ 		height: 4rem;
+ 		display: none;
+ 	}*/
+ 	
+ 	 .fixed{
+ 		position: fixed;
+ 		display: none;
+ 	}
+ 	
+ 	#people{
+ 		top: 4.8rem;
+ 		left: 1.7rem;
+ 		width: 4rem;
+ 		height: 6.5rem;
+ 	}
+ 	#head{
+ 		top: 4.6rem;
+ 		left: 2.3rem;
+ 		width: 2.7rem;
+ 		height: 1.5rem;
+ 	}
+ 	#close{
+ 		top: 6.85rem;
+ 		left: 1.65rem;
+ 		width: 4rem;
+ 		height: 4.5rem;
+ 	}
+
+ 	.add1{
+ 		top: 4.1rem;
+ 		left: 2.2rem;
+ 		width: 3rem;
+ 		height: 2rem;
+ 	}
+ 	.add2{
+ 		top: 6.8rem;
+ 		left: 2.7rem;
+ 		width: 2rem;
+ 		height: 1rem;
+ 	}
+ 	 	.add3{
+ 		top: 5.1rem;
+ 		left: 2.4rem;
+ 		width: 2.6rem;
+ 		height: .8rem;
+ 	}
+ 	 	.add4{
+ 		top: 4.6rem;
+ 		left: 1.7rem;
+ 		width: 4rem;
+ 		height: 2.2rem;
+ 	}
+ 	.add5{
+ 		top: 8.1rem;
+ 		left: 1.7rem;
+ 		width: 1rem;
+ 		height: .8rem;
+ 	}
+ 	.add6{
+ 		top: 4.6rem;
+ 		left: 4.2rem;
+ 		width: 1rem;
+ 		height: .8rem;
+ 	}
+ 	
+ 	.add7{
+ 		top: 8.8rem;
+ 		left: 1.1rem;
+ 		width: 1.2rem;
+ 		height: 1rem;
+ 	}
+ 	
+ 	.add8{
+ 		top: 8.8rem;
+ 		left: 1.1rem;
+ 		width: 1.2rem;
+ 		height: 1rem;
+ 	}
+ 	
+ 	.add9{
+ 		top: 7.8rem;
+ 		left: 1.3rem;
+ 		width: 1rem;
+ 		height: 1.2rem;
+ 		z-index: 2;
+ 	}
+ 	
+ 	.parts1{
+ 		top: 8.6rem;
+ 		left: 6rem;
+ 		width: 1rem;
+ 		height: 2rem;
+ 	}
+ 	.parts2{
+ 		top: 8.6rem;
+ 		left: 5.7rem;
+ 		width: 2rem;
+ 		height: 1.2rem;
+ 	}
+ 	.parts3{
+ 		top: 8.6rem;
+ 		left: 5.7rem;
+ 		width: 1.5rem;
+ 		height: 2rem;
+ 	}
+ 	
+ 	.parts4{
+ 		top: 8.6rem;
+ 		left: 5.7rem;
+ 		width: 2rem;
+ 		height: 2rem;
+ 	}
+ 	.items{
+ 		height: 3.5rem;
+ 		background: rgba(86,86,86,0.4);
+ 		position: fixed;
+ 		bottom: 0;
+ 		left: 0;
+ 		overflow-x:scroll;
+ 		z-index: 3;
+ 		display: none;
+ 	}
+ 	.items ul{
+ 		width: 200%;
+ 		display: inline;
+ 		white-space: nowrap;
+ 		height: 2rem;
+ 		float:left;
+ 		overflow-y:hidden;
+ 		box-sizing: content-box;
+ 	}
+ 	
+ 	.items ul li{
+ 		margin-left: .3rem;
+ 		height: 2rem;
+ 		margin-top: .3rem;
+ 		display: inline;
+ 		float: left;
+ 		width: 2.1rem;
+ 	}
+ 	.items ul img{
+ 		max-width: 2rem;
+ 		max-height: 2rem;
+ 	}
+ 	
+ 	#mypic{
+ 		position: fixed;
+ 		bottom: .5rem;
+ 		left:1.8rem;
+ 		width: 4rem;
+ 		height: .7rem;
+ 	}
+ 	.nan{
+ 		width: 1.3rem;
+ 		height: 1.3rem;
+ 		left: 2rem;
+ 		top: 8.5rem;
+ 	}
+ 	.nv{
+ 		width: 1.3rem;
+ 		height: 1.3rem;
+ 		left: 4rem;
+ 		top: 8.5rem;
+ 	}
+    </style>
+</head>
+<body>
+        <div class="container">
+        	<img id="c1" class="img-btn" src="resources/imgs/c1.png"/>
+        	<img id="c2" class="img-btn" src="resources/imgs/c2.png"/>
+        	<img id="c3" class="img-btn" src="resources/imgs/c3.png?t=111"/>
+        	<img id="c4" class="img-btn" src="resources/imgs/c4.png?t=2cc"/>
+        	
+        	<img id="redo" src="resources/imgs/redo.png"/>
+        	
+        	<img id="road" src="resources/imgs/road.png"/>
+        	
+        	<!-- <img id="logos" src="resources/imgs/logos.png"/>-->
+        	
+        	<img id="people" class="fixed" src=""/>
+        	
+        	<img id="head" class="fixed" src=""/>
+        	
+        	<img id="close" class="fixed" src=""/>
+        	<!--  
+        	<img class="fixed add9" src=""/>
+        	<img class="fixed parts4" src="resources/imgs/parts4.png"/>
+        	-->
+        	<img class="fixed nan sex-btn" src="resources/imgs/nan-btn.png"/>
+        	
+        	<img class="fixed nv sex-btn" src="resources/imgs/nv-btn.png"/>
+        </div>
+         <div class="items">
+        		<ul>
+        			<!--  
+        			<li><img src="resources/imgs/nan-head2.png"/></li>
+        			<li><img src="resources/imgs/nan-head3.png"/></li>
+        			-->
+        		</ul>
+        	</div>
+        	<img id="mypic" class="fixed" src="resources/imgs/mypic.png"/>
+        	
+        	<img id="showleft" class="fixed" style="bottom:1rem;right:.2rem;z-index:100;width:1.5rem;height:1.5rem;" src="resources/imgs/more.png"/>
+  <script>
+  var sex = '-1';
+  var actions = [];
+  setInterval(function(){
+	  if(actions.length>0){
+		  $("#redo").show();
+		  if(actions.length>=4){
+			  var isOk = false;
+			  for(var i in actions){
+				  if(actions[i].type == 'people'){
+					  isOk = true;
+					  break;
+				  }
+			  }
+			  if(isOk){
+				  if(sex == '-1'){
+						showToast('请选择人物！');
+						return;
+				  }
+				  $("#mypic").show();
+				  $("#mypic").click(function(){
+					  location.href = 'a5.html?data='+encodeURI(JSON.stringify(actions))+'&name='+encodeURI($.getUrlParam('name'));
+				  });
+			  }else{
+				  $("#mypic").hide()
+			  }
+		  }else{
+			  $("#mypic").hide()
+		  }
+	  }else{
+		  $("#redo").hide();
+		  $("#mypic").hide()
+	  }
+  },500);
+  $("#redo").click(function(){
+	  if(actions.length>0){
+		 var event =  actions.splice(actions.length-1,1);
+		 if(event && event.length>0){
+			 if(event[0].type == 'adv'){
+				 $("#logos").hide();
+				 $(".container").css('background','url(resources/imgs/board.png) center center no-repeat');
+				 $(".container").css('background-size','100% 100%');
+			 }else if(event[0].type == 'people'){
+				 $("#people").fadeOut(1000);
+			 }else if(event[0].type == 'head'){
+				 $("#head").fadeOut(1000);
+			 }else if(event[0].type == 'close'){
+				 $("#close").fadeOut(1000);
+			 }else if(event[0].type == 'add'){
+				 $(".container").find("."+event[0].val).remove();
+			 }
+			
+		 }
+	  }
+	  
+  });
+  var current = 'close';
+  $(function(){
+	$("#c1").click(function(){
+		var event = {type:'adv',val:0};
+		actions.push(event);
+		$(".container").css('background','url(resources/imgs/board1.png?t=1) center center no-repeat');
+		$(".container").css('background-size','100% 100%');
+		$("#logos").show();
+	});
+	
+	$("#c2").click(function(){
+		if($("#people").is(":hidden")){
+			$(".sex-btn").show();
+			$(".sex-btn").click(function(){
+				if($(this).hasClass('nan')){
+					sex = '0';
+				}else{
+					sex = '1';
+				}
+				var event = {type:'people',val:sex};
+				actions.push(event);
+				if(sex == '0'){
+					$("#people").attr('src','resources/imgs/nan.png').fadeIn(500);
+				}else{
+					$("#people").attr('src','resources/imgs/nv.png').fadeIn(500);
+				}
+				$(".sex-btn").hide();
+			});
+		}else{
+			showToast('您已选择人物，请先撤销！');
+		}
+
+	});
+	
+	$("#c3").click(function(){
+		if($(".items").is(":hidden") || current != 'close'){
+			var sexstr = 'nan';
+			if(sex == '1'){
+				sexstr = 'nv';
+			}
+			var lis = '';
+			for(var i=1;i<=3;i++){
+				lis += '<li><img data="head'+i+'" src="resources/imgs/'+sexstr+'-head'+i+'.png"/></li>';
+			}
+			for(var i=1;i<=5;i++){
+				lis += '<li><img data="close'+i+'" src="resources/imgs/'+sexstr+'-close'+i+'.png?t=111"/></li>';
+			}
+			$(".items ul").empty().css('width',8/3 * 100 +'%').html(lis);
+			$(".items").show();
+			$("#showleft").show();
+			current = 'close';
+			$(".items li").click(function(){
+				var img = $($(this).children('img')[0]);
+				if(img.attr('src').indexOf('head')>=0){
+					if($("#head").is(":hidden")){
+						var event = {type:'head',val:img.attr('data')};
+						actions.push(event);
+						$("#head").attr('src',img.attr('src')).fadeIn(500);
+						//$(".items").hide();
+						
+						if(sexstr == 'nv'){
+							if(img.attr('data') == 'head1' ){
+								$("#head").css('top','4.1rem');
+								$("#head").css('width','3.8rem');
+								$("#head").css('left','1.8rem');
+								$("#head").css('height','3.4rem');
+							}else if(img.attr('data') == 'head2'){
+								$("#head").css('top','4.6rem');
+								$("#head").css('left','2.2rem');
+								$("#head").css('width','3.9rem');
+								$("#head").css('height','2rem');
+							}else if(img.attr('data') == 'head3'){
+								$("#head").css('left','2.2rem');
+								$("#head").css('top','4.6rem');
+								$("#head").css('width','3rem');
+								$("#head").css('height','3rem');
+							}
+						}else{
+							$("#head").css('top','4.6rem');
+							$("#head").css('left','2.3rem');
+							$("#head").css('width','2.7rem');
+							$("#head").css('height','1.5rem');
+						}
+					}else{
+						showToast('请撤销之后再添加！');
+					}
+					
+				}else if(img.attr('src').indexOf('close')>=0){
+					if($("#close").is(":hidden")){
+						var event = {type:'close',val:img.attr('data')};
+						actions.push(event);
+						$("#close").attr('src',img.attr('src')).fadeIn(500);
+						if(sexstr == 'nv'){
+							if(img.attr('data') == 'close1'){
+								$("#close").css('left','2.1rem');
+								$("#close").css('width','3.2rem');
+							}else if(img.attr('data') == 'close2'){
+								$("#close").css('left','2.55rem');
+								$("#close").css('width','2.3rem');
+							}else if(img.attr('data') == 'close3'){
+								$("#close").css('left','2.2rem');
+								$("#close").css('width','3rem');
+							}else if(img.attr('data') == 'close4'){
+								$("#close").css('left','1.65rem');
+								$("#close").css('width','4.1rem');
+							}else if(img.attr('data') == 'close5'){
+								$("#close").css('left','1.65rem');
+								$("#close").css('width','4.2rem');
+							}
+						}else{
+							if(img.attr('data') == 'close2'){
+								$("#close").css('left','2rem');
+								$("#close").css('width','3.4rem');
+							}else{
+								$("#close").css('left','1.65rem');
+								$("#close").css('width','4rem');
+							}
+							
+						}
+						//$(".items").hide();
+					}else{
+						showToast('请撤销之后再添加！');
+					}
+				}
+			
+			});
+		}else{
+			if(current == 'close'){
+				$(".items").hide();
+				$("#showleft").hide();
+			}
+			
+		}
+	});
+	
+	$("#c4").click(function(){
+		if($(".items").is(":hidden") || current != 'add'){
+			var sexstr = 'nan';
+			if(sex == '1'){
+				sexstr = 'nv';
+			}
+			var lis = '';
+			for(var i=1;i<=9;i++){
+				lis += '<li><img data= "add'+i+'" src="resources/imgs/add'+i+'.png"/></li>';
+			}
+			for(var i=1;i<=4;i++){
+				lis += '<li><img data= "parts'+i+'" src="resources/imgs/parts'+i+'.png"/></li>';
+			}
+			$(".items ul").empty().css('width',13/3 * 100 +'%').html(lis);
+			$(".items").show();
+			$("#showleft").show();
+			current = 'add';
+			$(".items li").click(function(){
+				var img = $($(this).children('img')[0]);
+				if(img.attr('src').indexOf('add')>=0){
+					if($(".container").find("."+img.attr('data')).length<=0){
+						var addStr = '<img class="fixed '+img.attr('data')+'" src="'+img.attr('src')+'"/>';
+						$("#close").after(addStr);
+						var event = {type:'add',val:img.attr('data')};
+						actions.push(event);
+						$(".container ."+img.attr('data')).show();
+					}else{
+						showToast('请撤销之后再添加！');
+					}
+				}else if(img.attr('src').indexOf('parts')>=0){
+					if($(".container").find(".parts").length<=0){
+						var addStr = '<img class="fixed parts '+img.attr('data')+'" src="'+img.attr('src')+'"/>';
+						$("#close").after(addStr);
+						var event = {type:'add',val:img.attr('data')};
+						actions.push(event);
+						$(".container ."+img.attr('data')).show();
+					}else{
+						showToast('请撤销之后再添加！');
+					}
+				}
+			});
+		}else{
+			if(current == 'add'){
+				$(".items").hide();
+				$("#showleft").hide();
+			}
+			
+		}
+	});
+	
+	$("#showleft").click(function(){
+		$(".items").animate({scrollLeft:$(".items").scrollLeft()+$('.items ul li').width()+30},100);
+		
+		//$(".items").scrollLeft($(".items").scrollLeft()+$('.items ul li').width());
+	});
+	
+	$(".container").click(function(e){
+		if(e && e.target.nodeName == 'DIV'){
+			$('.items').hide();
+			$("#showleft").hide();
+		}
+	});
+  });
+  </script>
+</body>
+</html>

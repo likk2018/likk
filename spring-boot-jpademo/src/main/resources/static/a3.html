@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>摩方-预约</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Expires" content="0">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+
+    <meta name="viewport" id="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="full-screen" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="resources/css/com.css?t=1">
+    <script type="text/javascript" src="resources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="resources/js/common/common.js?t=135552"></script>
+    <script type="text/javascript" src="resources/js/login/loginverify.js?t=12222"></script>
+    <style>
+    html,body{
+    	margin: 0;
+    	padding: 0;
+    	width: 100%;
+    }
+    .container{
+    	width: 100%;
+    	height:100%;
+    	position: relative;
+    	background: url(resources/imgs/a2.png) center center no-repeat;
+    	background-size: 100% 100%;
+    	max-width: 520px;
+    	min-width: 300px;
+    	margin: 0 auto;
+    }
+    .container .top{
+    	margin: 0 auto .3rem auto;
+    	width: 2.7rem;
+    	height: 2.7rem;
+    	display: block;
+    	padding-top:1.9rem;
+    }
+    .container ul{
+    	text-align: left;
+    	color: #000;
+    	font-size: 18px; 
+    	margin-top: 0rem;
+    	font-weight: bold;
+    }
+    .container ul li{
+    	background: #fff;
+    	height: .7rem;
+    	width: 4rem;
+    	margin: .3rem  auto 0 auto;
+    	line-height: .7rem;
+    }
+    .container ul li span{
+    	display: inline-block;
+    	float: left;
+    	width: 30%;
+    	height: .7rem;
+    	text-align: center;
+    	text-indent: 5px;
+    }
+    .container ul li input,select{
+   		 width: 68%;
+    	display: inline-block;
+    	float: left;
+    	height: 100%;
+    	border: none;
+    }
+    .container .btn{
+    	width: 4.5rem;
+    	display: block;
+    	margin: .4rem auto 0 auto;
+    }
+    #yuyueok{
+    	display: none;
+    	position: fixed;
+    	top:4.5rem;
+    	left: .4rem;
+    	z-index: 2;
+    	width: 5.5rem;
+    	height: 3.2rem;
+    }
+    </style>
+</head>
+<body>
+        <div class="container">
+        	<img class="top" src="resources/imgs/byy.png"/>
+        	<div>
+        		<ul>
+        			<li><span>姓&nbsp;名：</span><input id="name" type="text" maxlength="8"></input></li>
+        			<li><span>性&nbsp;别：</span>
+        				<select id="sex">
+        					<option value="男">男</option>
+        					<option value="女">女</option>
+        				</select>
+        			</li>
+        			<li><span>电&nbsp;话：</span><input id="phone" type="number" maxlength="11"></input></li>
+        		</ul>
+        		<img id="yuyue" class="btn" src="resources/imgs/yuyue.png"/>
+        	</div>
+        	<img id="yuyueok" class="btn" src="resources/imgs/yyok.png?t=222"/>
+        </div>
+    
+  <script>
+  $(function(){
+	  /*var openId = getCookie('wxopenid');
+	  if(!openId || openId == null){
+		  location.href = DOMIN.MAIN+'/test/index.html';
+		  return;
+	  }*/
+	 // getLoginToken();
+	$("#yuyue").click(function(){
+		var err = JSVerify.Phone($("#phone").val());
+		if(err){
+			showToast(err);
+			return;
+		}
+		if($.trim($("#name").val())==''){
+			showToast('请输入名字！');
+			return;
+		}
+		addUser();
+	});
+  });
+  
+  function addUser(){
+	  $.ajax({
+	      type:'post',
+	      url:'user/add', 
+	      async:false,
+	      cache:false,
+	      data:{
+	    	  name:$.trim($("#name").val()),
+	    	  sex:$("#sex").val(),
+	    	  phone:$.trim($("#phone").val())
+	      },
+	      dataType:'text',
+	      success:function(res){
+	    	 	console.log(res)
+	              if (res=='ok'){
+	            	  $("#yuyueok").fadeIn();
+	            	  $("#yuyueok").click(function(){
+	            		  var sex = $("#sex").val()=='男'?0:1;
+	            		  location.href = 'a4.html?sex='+sex+'&name='+encodeURI(encodeURI($.trim($("#name").val())));
+	            	  });
+	            	 
+	              }else if(res=='exists'){
+	            	  showToast('您已经预约！');
+	              }
+	          },
+	          error:function(XMLResponse){
+	        	  alert(XMLResponse.responseText)
+	          }
+	      
+	      }); 
+  }
+  </script>
+</body>
+</html>
+ 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>摩方-首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Expires" content="0">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+
+    <meta name="viewport" id="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="full-screen" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="resources/js/jquery.js"></script>
+    <script type="text/javascript" src="resources/js/common/common.js?t=132"></script>
+    <script type="text/javascript" src="resources/js/login/openId.js?t=12222"></script>
+    <style>
+    html,body{
+    	height: 100%;
+    	margin: 0;
+    	padding: 0;
+    	width: 100%;
+    	font-fa
+    }
+    .container{
+    	width: 100%;
+    	height: 100%;
+    	position: relative;
+    }
+    .container img{
+    	margin-top: 4rem;
+    	margin:3rem auto .5rem auto;
+    	display: block;
+    }
+    </style>
+</head>
+<body>
+        <div class="container">
+        	<img src="resources/imgs/A2.png">
+        </div>
+    
+  <script>
+  $(function(){
+	  /*var openId = getCookie('wxopenid');
+	  if(!openId || openId == null){
+		  location.href = DOMIN.MAIN+'/test/index.html';
+		  return;
+	  }*/
+	 // getLoginToken();
+	
+  });
+  
+  function getLoginToken(){
+	  $.ajax({
+	      type:'post',
+	      url:DOMIN.MAIN+'/test/queryTest', 
+	      async:false,
+	      cache:false,
+	      data:{
+	    	  openId:getCookie('wxopenid')
+	      },
+	      dataType:'json',
+	      success:function(res){
+	              if (res!=null && res.success){
+	            	  getAuthLogin();
+	              }else{
+	            	  alert('您还没有绑定账号，请先做测评！');
+	            	  location.href = DOMIN.MAIN+'/test/index.html';
+	              }
+	              
+	          }
+	      }); 
+  }
+  
+  function getAuthLogin(){
+	  
+	  $("#miniQr").attr('src','https://wx.taoxiaoguai.cn/mini-www/user/getMiniQr?scene='
+			  +getCookie('wxopenid')+'&path=pages/login/login');
+	  return;
+	  /*$.ajax({
+	      type:'post',
+	      url:DOMIN.MAIN+'/login/getAuthToken', 
+	      async:false,
+	      cache:false,
+	      data:{
+	    	  openId:getCookie('wxopenid')
+	      },
+	      dataType:'json',
+	      success:function(res){
+	              if (res!=null && res.success){
+	            	  var path = encodeURI('?token='+res.data);
+	              }else{
+	            	  alert('获取自动登录失败'+res.message);
+	              }
+	              
+	          }
+	      }); */
+  }
+   
+  </script>
+</body>
+</html>
+ 
