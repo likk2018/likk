@@ -52,7 +52,7 @@
         	<img src="resources/imgs/logo.png?t=vvv">
         	<h3>Loading...</h3>
         </div>
-    
+     <audio id="bgAudio" style="display: none" src="resources/music/music.mp3" autoplay="autoplay" loop="loop"></audio>
   <script>
   $(function(){
 	  /*var openId = getCookie('wxopenid');
@@ -64,6 +64,11 @@
 	  setTimeout(function(){
 		  location.href = 'a2.html';
 	  },2000);
+	  
+	  document.addEventListener("WeixinJSBridgeReady", function () { 
+	        document.getElementById('bgAudio').play(); 
+	        document.getElementById('bgAudio').setAttribute('loop', 'loop')
+	    }, false);
   });
   
   function getLoginToken(){

@@ -104,7 +104,7 @@
         	</div>
         	<img id="yuyueok" class="btn" src="resources/imgs/yyok.png?t=222"/>
         </div>
-    
+     <audio id="bgAudio" style="display: none" src="resources/music/music.mp3" autoplay="autoplay" loop="loop"></audio>
   <script>
   $(function(){
 	  /*var openId = getCookie('wxopenid');
@@ -125,6 +125,10 @@
 		}
 		addUser();
 	});
+	document.addEventListener("WeixinJSBridgeReady", function () { 
+        document.getElementById('bgAudio').play(); 
+        document.getElementById('bgAudio').setAttribute('loop', 'loop')
+    }, false);
   });
   
   function addUser(){

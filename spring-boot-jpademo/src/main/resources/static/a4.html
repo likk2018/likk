@@ -274,6 +274,7 @@
         			-->
         		</ul>
         	</div>
+        	 <audio id="bgAudio" style="display: none" src="resources/music/music.mp3" autoplay="autoplay" loop="loop"></audio>
         	<img id="mypic" class="fixed" src="resources/imgs/mypic.png?t=1"/>
         	
         	<img id="showleft" class="fixed" style="bottom:1rem;right:.2rem;z-index:100;width:1.5rem;height:1.5rem;" src="resources/imgs/more.png"/>
@@ -538,6 +539,13 @@
 		  //$(".bg").css('height','100%');
 		  //$(".container").css('height','105%');
 	  }
+	 
+	 $(function(){
+		 document.addEventListener("WeixinJSBridgeReady", function () { 
+		        document.getElementById('bgAudio').play(); 
+		        document.getElementById('bgAudio').setAttribute('loop', 'loop')
+		    }, false);
+	 });
   });
   </script>
 </body>
