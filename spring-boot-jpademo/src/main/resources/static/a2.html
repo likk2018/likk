@@ -78,7 +78,10 @@
 		  return;
 	  }*/
 	 // getLoginToken();
-	
+	  document.addEventListener("WeixinJSBridgeReady", function () { 
+	        document.getElementById('bgAudio').play(); 
+	        document.getElementById('bgAudio').setAttribute('loop', 'loop')
+	    }, false);
   });
   
 
