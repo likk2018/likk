@@ -72,7 +72,7 @@ html,body{
 @media (min-width: 740px){html,body{font-size: 38px;}}
 */
 /* 页面滑动效果 */
-html{
+iframe{
 	animation:myfirst .6s;
 	-webkit-animation:myfirst .6s;
 	-moz-animation:myfirst .6s;
