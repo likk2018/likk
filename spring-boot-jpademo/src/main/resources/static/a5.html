@@ -60,6 +60,17 @@
  		width: 1.6rem;
  		height: 3.2rem;
  	}
+ 	
+ 	#tip{
+ 		position: fixed;
+ 		top: 3.6rem;
+ 		left: 1rem;
+ 		width: 5rem;
+ 		height: 3.2rem;
+ 		z-index: 999;
+ 	}
+ 	
+ 	
  	/*#logos{
  		position: fixed;
  		top: 1.3rem;
@@ -250,6 +261,8 @@
         	<img id="logos" class="bg" src="resources/imgs/board.png"/>
         	
         	<img id="road" src="resources/imgs/road.png?t=1"/>
+        	
+        	<img id="tip" src="resources/imgs/tip.png?t=1"/>
         	<!-- <img  src="resources/imgs/logos.png"/>-->
         	
         	<img id="people" class="fixed" src=""/>
@@ -386,7 +399,9 @@
   
 
   $(document).ready(function(){
-	  setTimeout(function(){
+	  $("#tip").click(function(){
+		  var tip = $(this);
+		   tip.hide();
 		  html2canvas(document.body).then(canvas => {
 			  //document.body.appendChild(canvas)
 			  var dataUrl = canvas.toDataURL();
@@ -397,7 +412,7 @@
 		      document.body.innerHTML="";
 		      document.body.appendChild(newImg);
 			});
-	  },500);
+	  });
 
 		//  $(function(){
 		// 	 document.addEventListener("WeixinJSBridgeReady", function () { 
