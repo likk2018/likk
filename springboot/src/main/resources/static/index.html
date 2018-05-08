@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>造出不一YOUNG的摩力</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+	<link rel="stylesheet" href="resources/css/com.css?t=122">
+    <style>
+        html,body{width: 100%;height: 100%;position: relative;}
+        #iframe{position: absolute;top:0;bottom: 0;left: 0;right:0;}
+        *{margin: 0;padding: 0}
+    </style>
+</head>
+
+<body>
+    <audio id="bgAudio" style="display: none" src="resources/music/music.mp3" autoplay="autoplay" loop="loop"></audio>
+    <iframe id="iframe" src="loading.html" frameborder="0" width="100%" height="100%" ></iframe>
+    <script>
+        document.addEventListener("WeixinJSBridgeReady", function () { 
+	        document.getElementById('bgAudio').play(); 
+	        document.getElementById('bgAudio').setAttribute('loop', 'loop')
+	    }, false);
+    </script>
+</body>
+</html>

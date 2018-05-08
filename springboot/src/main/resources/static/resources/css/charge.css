@@ -1,0 +1,111 @@
+body{
+    padding: .38rem;
+    padding-bottom: .5rem;
+    background: url(../imgs/test/bg-charge.png) center center no-repeat;
+    background: contain;
+    max-width: 650px;
+    margin: 0 auto;
+}
+.card{
+    width: 100%;
+    padding: .3rem;
+   background: #fff;
+    border-radius: .07rem;
+    box-sizing: border-box;
+    background: url(../imgs/test/bg-charge2.png) center center no-repeat;
+    background-size:100% 100%; 
+}
+.title{
+    font-size:.6rem;
+    color: #1d6b42; 
+    margin-top: .4rem;
+    margin-left: -.1rem;
+    font-weight: bold;
+    position: relative;
+}
+.charge-left{
+    display: inline-block;
+    width: .2rem;
+    height: .2rem;
+    background: url(../imgs/test/charge-left.png) center center no-repeat;
+    position: absolute;
+    left: -0.1rem;
+    bottom: -0.04rem;
+}
+.charge-right{
+    display: inline-block;
+    width: .2rem;
+    height: .2rem;
+    background: url(../imgs/test/charge-right.png) center center no-repeat;
+    position: absolute;
+    left: 2.9rem;
+    top: 0.06rem;
+}
+
+.arrow-down{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+.title span{
+    position: relative;
+}
+.dashed{
+    display: inline-block;
+    width: .2rem;
+    height: .7rem;
+    transform: translateY(.1rem);
+    background: url(../imgs/test/dashed.png) center center no-repeat;
+ }
+.title span:last-child ::after{
+    content: '';
+ }
+.content{
+    font-size: .3rem;
+    padding: .2rem;
+    margin-bottom: .2rem;    
+}
+footer{
+    color: #fff;
+    background: #FF9C00 ;
+    padding: .2rem .3rem;
+    margin-top: .48rem;
+    border: 0.01rem solid #fff;
+    border-radius:0.17rem; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer div:first-child{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.rmb{
+    font-size: .56rem;
+}
+.day::before{
+    content: '/';
+    font-size: .3rem;
+   color: #63A963;
+   margin-left:0.02rem;
+   margin-right:0.02rem;
+}
+.day{
+    font-size: .3rem;
+    padding-top: .1rem;
+}
+footer div:last-child{
+    font-size: .48rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.horn{
+    width:.36rem;
+    height:.32rem;
+    margin-left: .2rem;
+}

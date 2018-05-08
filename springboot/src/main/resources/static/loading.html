@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>造出不一YOUNG的摩力</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Expires" content="0">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+
+    <meta name="viewport" id="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="full-screen" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="resources/css/com.css?t=122">
+    <script type="text/javascript" src="resources/js/jquery.js"></script>
+    <script type="text/javascript" src="resources/js/common/common.js?t=111"></script>
+    <script type="text/javascript" src="resources/js/login/openId.js?t=12222"></script>
+    <style>
+    html,body{
+    	margin: 0;
+    	padding: 0;
+    	width: 100%;
+    	background: #fff;
+    }
+    .container{
+    	width: 100%;
+    	position: relative;
+    	background: #fff;
+    	max-width: 520px;
+    	min-width: 300px;
+    	margin: 0 auto;
+    }
+    .container img{
+    	margin-top: 4rem;
+    	margin:3rem auto .5rem auto;
+    	display: block;
+    	width: 60%;
+    }
+    .container h3{
+      	margin-top: .5rem;
+    	font-size: .5rem;
+    	text-align: center;
+    	width: 100%;
+    }
+    </style>
+</head>
+<body>
+        <div class="container">
+        	<img src="resources/imgs/logo.png?t=vvv">
+        	<h3>Loading...</h3>
+        </div>
+     <!-- <audio id="bgAudio" style="display: none" src="resources/music/music.mp3" autoplay="autoplay" loop="loop"></audio> -->
+  <script>
+  $(function(){
+	  /*var openId = getCookie('wxopenid');
+	  if(!openId || openId == null){
+		  location.href = DOMIN.MAIN+'/test/index.html';
+		  return;
+	  }*/
+	 // getLoginToken();
+	  setTimeout(function(){
+		  location.href = 'a2.html';
+	  },2000);
+	  
+	//   document.addEventListener("WeixinJSBridgeReady", function () { 
+	//         document.getElementById('bgAudio').play(); 
+	//         document.getElementById('bgAudio').setAttribute('loop', 'loop')
+	//     }, false);
+  });
+  
+  function getLoginToken(){
+	  $.ajax({
+	      type:'post',
+	      url:DOMIN.MAIN+'/test/queryTest', 
+	      async:false,
+	      cache:false,
+	      data:{
+	    	  openId:getCookie('wxopenid')
+	      },
+	      dataType:'json',
+	      success:function(res){
+	              if (res!=null && res.success){
+	            	  getAuthLogin();
+	              }else{
+	            	  alert('您还没有绑定账号，请先做测评！');
+	            	  location.href = DOMIN.MAIN+'/test/index.html';
+	              }
+	              
+	          }
+	      }); 
+  }
+  
+  function getAuthLogin(){
+	  
+	  $("#miniQr").attr('src','https://wx.taoxiaoguai.cn/mini-www/user/getMiniQr?scene='
+			  +getCookie('wxopenid')+'&path=pages/login/login');
+	  return;
+	  /*$.ajax({
+	      type:'post',
+	      url:DOMIN.MAIN+'/login/getAuthToken', 
+	      async:false,
+	      cache:false,
+	      data:{
+	    	  openId:getCookie('wxopenid')
+	      },
+	      dataType:'json',
+	      success:function(res){
+	              if (res!=null && res.success){
+	            	  var path = encodeURI('?token='+res.data);
+	              }else{
+	            	  alert('获取自动登录失败'+res.message);
+	              }
+	              
+	          }
+	      }); */
+  }
+   
+  </script>
+</body>
+</html>
+ 
