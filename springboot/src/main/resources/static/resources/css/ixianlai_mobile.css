@@ -1,0 +1,358 @@
+		@charset "UTF-8";
+		html,
+		body {
+			height: 100%;
+		}
+		
+		.margin-top-50 {
+			margin-top: 50px !important;
+		}
+		/**button,a**/
+		
+		a.btn {
+			margin-bottom: 20px !important;
+		}
+		
+		.navbar.navbar-static-top a.btn:link {
+			color: #FFF !important;
+		}
+		
+		.navbar.navbar-static-top a.btn:visited {
+			color: #FFF !important;
+		}
+		
+		.navbar.navbar-static-top a.btn:hover {
+			color: #FFF !important;
+		}
+		
+		.navbar.navbar-static-top a.btn:active {
+			color: #FFF !important;
+		}
+		
+		a.btn-primary.dim {
+			box-shadow: inset 0 0 0 #16987E, 0 5px 0 0 #16987E, 0 10px 5px #999;
+		}
+		
+		a.btn-info.dim {
+			box-shadow: inset 0 0 0 #1EACAE, 0 5px 0 0 #1EACAE, 0 10px 5px #999;
+		}
+		
+		a.btn-default.dim {
+			box-shadow: inset 0 0 0 #B3B3B3, 0 5px 0 0 #B3B3B3, 0 10px 5px #999;
+		}
+		
+		#page-wrapper {
+			padding: 0;
+		}
+		
+		.nav-tabs > li > a {
+			color: #A7B1C2;
+		}
+		
+		.nav-tabs > li > a:link {
+			color: #A7B1C2;
+		}
+		
+		.nav-tabs > li > a:visited {
+			color: #A7B1C2;
+		}
+		
+		.nav-tabs > li > a:hover {
+			color: #A7B1C2;
+		}
+		
+		.nav-tabs > li > a:active {
+			color: #A7B1C2;
+		}
+		#side-menu a:active{
+			color: #A7B1C2;
+		}
+		#side-menu li a span{
+			color: #A7B1C2;
+		}
+		#side-menu li.active a span{
+			color: #FFF;
+		}
+		#side-menu li.active>a{
+			color: #FFF !important;
+		}
+		#side-menu li.active>a:link{
+			color: #FFF !important;
+		}
+		#side-menu li.active>a a:focus{
+			color: #FFF !important;
+		}
+		#side-menu li.active>a:visited{
+			color: #FFF !important;
+		}
+		#side-menu li.active>a:active{
+			color: #FFF !important;
+		}
+		#side-menu li.active>a:hover{
+			color: #FFF !important;
+		}
+		/**header**/
+		
+		#Header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 50px;
+			width: 100%;
+			overflow: hidden;
+			z-index: 10000;
+		}
+		/*#Header .navbar.navbar-static-top {
+			background: #293846;
+		}*/
+		
+		.search-header {
+			float: right;
+		}
+		
+		.header-title {
+			float: left;
+			text-align: center;
+			position: absolute;
+			width: 100%;
+			font-size: 26px;
+			line-height: 50px;
+			z-index: -1;
+			/*color: #FFF;*/
+		}
+		
+		.minimalize-styl-2 {
+			padding: 6px 12px;
+			margin: 10px;
+		}
+		/**左边导航**/
+		
+		.navbar-default.navbar-static-side {
+			margin-top: 50px;
+		}
+		
+		#side-menu li {
+			background-color: #293846;
+		}
+		
+		.second_nav {
+			border-radius: 0 2px 2px 0;
+			min-width: 140px;
+			background-color: #2F4050;
+			font-size: 12px;
+			list-style: none;
+		}
+		
+		.second_nav>li {
+			position: relative;
+			display: block;
+		}
+		
+		.second_nav>li.active {
+			background: #293846;
+		}
+		
+		.second_nav>li.active a {
+			color: #FFF;
+		}
+		
+		.second_nav li a {
+			font-size: 12px;
+			border-radius: 3px;
+			padding: 10px 10px 10px 15px;
+			color: #A7B1C2;
+			;
+			font-weight: 600;
+			position: relative;
+			display: block;
+			text-decoration: none;
+		}
+		
+		.nav > li.active {
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-o-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		/****/
+		
+		.page-heading {
+			padding: 10px 10px 10px 10px;
+		}
+		
+		.breadcrumb li {
+			line-height: 30px;
+			font-size: 18px;
+		}
+		
+		.wrapper-content {
+			padding: 10px 10px 40px;
+		}
+		
+		.float-e-margins .btn {
+			margin-top: 10px;
+		}
+		/**ReportForm**/
+		
+		#ReportForm {
+			padding: 0px;
+			width: 100%;
+		}
+		
+		#ReportForm li {
+			float: left;
+			white-space: nowrap;
+			margin: 0 5px;
+			line-height: 10px;
+		}
+		
+		#ReportForm li label {
+			white-space: nowrap;
+		}
+		
+		#ReportForm li span {
+			margin-right: 0px;
+		}
+		/**right-aside**/
+		
+		#right-aside {
+			background: rgba(0, 0, 0, 0.5);
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			z-index: 2;
+			display: none;
+		}
+		
+		#right-aside>div {
+			background: #FFF;
+		}
+		
+		#right-aside>div div {
+			width: 100%;
+		}
+		
+		#right-aside>div .control-label {
+			width: 100px;
+			text-align: right;
+			height: 32px;
+			line-height: 32px;
+			margin-left: 10px;
+		}
+		
+		#right-aside>div select,
+		#right-aside>div input {
+			height: 32px;
+			line-height: 32px;
+			max-width: 50%;
+			min-width: 50%;
+		}
+		/***table***/
+		
+		.ibox-content {
+			padding: 0px !important;
+		}
+		
+		table.dataTable {
+			margin-top: 0px !important;
+		}
+		/*操作栏**/
+		
+		.operation-bar {
+			position: absolute;
+			line-height: 30px;
+			border-radius: 5px;
+			vertical-align: middle;
+			border: 1px solid #CCC;
+			background-color: #5c5c5c;
+		}
+		
+		.operation-bar a {
+			float: left;
+			padding: 5px 10px;
+			color: #FFF;
+			border-right: 1px solid #fff;
+			border-radius: 0px !important;
+		}
+		
+		.operation-bar a:last-child {
+			border-right: 0px;
+		}
+		/**自定义弹框***/
+		
+		.bootbox-alert {
+			margin-top: 50%;
+			width: 80%;
+			margin-left: 10%;
+			z-index: 9999 !important;
+		}
+		
+		.bootbox-alert .bootbox-body {
+			padding-left: 20px;
+		}
+		
+		.bootbox-alert .bootbox-close-button {
+			margin-top: -12px;
+			margin-right: 0px;
+			width: 30px;
+			height: 30px;
+		}
+		
+		.bootbox-alert .modal-footer .btn {
+			padding-bottom: 0px !important;
+		}
+		/**操作跳转页面***/
+		
+		.modal-body .form ul li label {
+			width: 35%;
+		}
+		
+		.modal-body {
+			padding: 15px 0px;
+		}
+		
+		.modal-body .form ul li input,
+		.modal-body .form ul li select {
+			width: 55%;
+		}
+		/***tab***/
+		
+		#TabTitle {
+			overflow: hidden;
+			margin: 5px 0px 0px;
+		}
+		
+		#TabTitle li {
+			float: left !important;
+		}
+		/**operation_box***/
+		
+		#operation_box {
+			margin-left: 0px;
+			text-align: left;
+			overflow: hidden;
+			margin-top: 10px;
+		}
+		
+		#operation_box div label {
+			width: auto;
+			margin-right: 0px;
+			margin-left: 10px;
+		}
+		
+		#operation_box div select {
+			width: auto;
+		}
+		
+		.text-box {
+			margin: 0px;
+			padding: 10px;
+		}
+		
+		.text-box textarea {
+			width: 100%;
+			height: 130px;
+			box-sizing: border-box;
+		}
+		

@@ -1,0 +1,440 @@
+	@charset "UTF-8";
+	select,
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"] {
+		display: inline-block;
+		padding: 4px 6px;
+		margin-bottom: 10px;
+		font-size: 14px;
+		line-height: 20px;
+		color: #555;
+		vertical-align: middle;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+	}
+	
+	.fl {
+		float: left !important;
+	}
+	.tl{
+		text-align: left !important;
+	}
+	.w-auto{
+		width: auto !important;	
+	}
+	.dep_inp_checkbox{
+		width: 20px !important;
+		margin-right: 10px !important;
+	}
+	table thead tr th,
+	table tbody tr td {
+		text-align: center;
+		white-space: nowrap !important;
+		font-size: 16px !important;
+	}
+	/**登录页面标题**/
+	
+	.middle-box h1 {
+		font-size: 70px;
+	}
+	/********验证码*********/
+	
+	.control-group {
+		width: 100%;
+		text-align: left;
+		margin-bottom: 15px;
+		overflow: hidden;
+	}
+	
+	.control-group .m-wrap {
+		width: 36%;
+		background-color: #FFF;
+		background-image: none;
+		border: 1px solid #E5E6E7;
+		border-radius: 1px;
+		color: inherit;
+		float: left;
+		padding: 6px 12px;
+		transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+		font-size: 14px;
+		margin-right: 5%;
+	}
+	
+	.control-group img {
+		float: left;
+		height: 34px;
+	}
+	
+	.control-group a {
+		float: left;
+		line-height: 34px;
+		margin-left: 15px;
+	}
+	
+	.ibox-tools {
+		float: right;
+	}
+	
+	.ibox-tools ul {
+		margin: 0px;
+		float: left;
+	}
+	
+	.ibox-tools ul li {
+		list-style: none;
+		float: left;
+	}
+	
+	.ibox-tools label {
+		float: left;
+		margin-bottom: 0;
+		padding: 7px 0px;
+	}
+	
+	.ibox-tools span {
+		float: left;
+		margin-right: 10px;
+		padding: 7px 0px;
+	}
+	
+	.table-title {
+		overflow: hidden;
+		background: #1AB394;
+		color: #fff;
+	}
+	
+	.ibox-tools .btn {
+		margin: 0px;
+		color: #FFF !important;
+	}
+	
+	.control-label {
+		width: 100px;
+		text-align: right;
+		line-height: 30px;
+	}
+	
+	.report-form input,
+	.report-form select {
+		width: 120px;
+		height: 30px;
+	}
+	.report-form2 input,
+	.report-form2 select {
+		width: 200px;
+		height: 30px;
+	}
+	.report-form input[type=radio]
+	{
+		width: auto;height:auto;
+	}
+	/********遮罩*********/
+	
+	.inmodal .modal-header {
+		padding: 15px;
+		text-align: left;
+	}
+	
+	.modal-body .form ul {
+		list-style: none;
+		padding: 0px;
+	}
+	
+	.modal-body .form ul li label {
+		font-weight: normal;
+		font-size: 16px;
+		text-align: right;
+		width: 135px;
+		padding: 0 15px 0 0;
+		float: left;
+		line-height: 30px;
+	}
+	
+	.modal-body .form ul li label span {
+		font-size: 16px;
+		line-height: 30px;
+	}
+	
+	.modal-body .form ul li {
+		margin-bottom: 15px;
+		overflow: hidden;
+	}
+	
+	.modal-body .form ul li input,
+	.modal-body .form ul li select {
+		width: 55%;
+		font-weight: normal;
+		font-size: 14px;
+		height: 30px;
+		padding: 4px 8px;
+		margin: 0;
+		float: left;
+	}
+	
+	.required {
+		color: #E02222;
+		font-size: 15px;
+		margin-right: 10px;
+		padding-left: 2px;
+		top: 3px;
+		position: relative;
+	}
+	/**tabs**/
+	
+	.nav.nav-tabs a {
+		color: #000;
+	}
+	
+	.tab-content .tab-pane .control-label,
+	.w-auto {
+		width: auto;
+		margin-right: 10px;
+	}
+	
+	.mr10 {
+		margin-right: 10px !important;
+	}
+	/***文本输入框***/
+	
+	.text-box {
+		margin: 20px 0px;
+	}
+	
+	.text-box textarea {
+		width: 800px;
+		height: 150px;
+	}
+	
+	.person-num {
+		font-size: 14px;
+		font-weight: 600;
+		/*color: #FFF;
+		background-color: #1AB394;
+		padding: 6px 12px;*/
+		display: inline-block;
+	}
+	
+	.person-num i {
+		font-size: 50px;
+		margin-right: 15px;
+	}
+	
+	.person-num .text-muted {
+		display: block;
+	}
+	
+	.text-muted {
+		display: block;
+		margin-top: 20px;
+	}
+	/**BsReport**/
+	
+	#BsReport h6 {
+		font-size: 20px;
+		color: #000;
+		font-weight: bold;
+	}
+	
+	#BsReport h6 span {
+		font-size: 14px;
+		color: #000;
+		font-weight: normal;
+		margin-left: 20px;
+	}
+	
+	#BsReport ul {
+		list-style: none;
+		overflow: hidden;
+	}
+	
+	#BsReport ul li {
+		float: left;
+		margin: 5px 50px 5px 0px;
+	}
+	
+	#BsReport .imgbox {
+		margin-left: 40px;
+	}
+	
+	#BsReport .imgbox:after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+	
+	#BsReport .imgbox label,
+	#BsReport .imgbox div {
+		float: left;
+	}
+	
+	#BsReport .imgbox label {
+		width: 40px;
+	}
+	
+	#BsReport .imgbox div {
+		width: 92%;
+	}
+	
+	#BsReport .imgbox div img {
+		float: left;
+		margin: 5px;
+		width: 130px;
+		height: 130px;
+	}
+	
+	#BsReport .bs-result li span {
+		margin: 0px 20px;
+	}
+	
+	#BsReport .bs-result li {
+		float: none;
+	}
+	
+	#BsReport .disposal {
+		margin-left: 40px;
+	}
+	
+	#BsReport .disposal p {
+		font-size: 16px;
+		font-weight: bolder;
+		margin-bottom: 20px;
+	}
+	/**图片放大样式*/
+	
+	.carrousel {
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		position: fixed;
+		background-color: rgba(10, 10, 10, 0.5);
+		z-index: 2002;
+		display: none;
+	}
+	
+	.carrousel .wrapper {
+		width: 50%;
+		margin: auto;
+		position: absolute;
+		top: 10%;
+		left: 0;
+		right: 0;
+		bottom: 10%;
+		padding: 0px;
+	}
+	
+	.carrousel .wrapper> img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+	
+	.carrousel .close {
+		cursor: pointer;
+		color: #000;
+		position: absolute;
+		top: -30px;
+		right: -30px;
+		font-size: 18px;
+		opacity: 1;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+		border-radius: 50%;
+		background: #FFF;
+	}
+	
+	.carrousel .close:hover {
+		font-size: 20px;
+		color: #DDD;
+	}
+	/*牌型活动*/
+	
+	#Tbody td {
+		line-height: 100%;
+		vertical-align: middle;
+	}
+	
+	.px-warp {
+		height: 30px;
+		overflow: hidden;
+		margin-bottom: 10px;
+	}
+	
+	.px-warp label,
+	.px-warp span {
+		line-height: 30px;
+		margin: 0 5px;
+		float: left;
+	}
+	
+	.px-warp select,
+	.px-warp input {
+		float: left;
+		margin-bottom: 0px;
+	}
+	
+	.pxplus-btn {
+		float: left;
+		font-size: 27px;
+		color: #1ab394;
+		margin: 0 5px;
+		height: 27px;
+		line-height: 27px;
+		width: 24px;
+		padding: 0px !important;
+		outline: none;
+		border: 0;
+		background: transparent;
+	}
+	
+	.pxplus-btn[disabled] {
+		color: #CCC;
+	}
+	
+	.wd-add-btn {
+		height: 30px;
+		padding: 0px 12px;
+		margin-left: 10px;
+	}
+	/**上传文件样式*/
+	.myfile{
+		width: 260px;
+	    font-size: 18px;
+	    margin: 20px auto;
+	} 
+	.btn_wn{
+		margin: 50px auto;
+	    display: block;
+	    text-align: center;
+	    vertical-align: middle;
+	    width: 160px;
+	    height: 35px;
+	    line-height: 35px;
+	    cursor: pointer;
+	    background: #1AB394;
+	    border-radius: 4px;
+	    -webkit-border-radius: 4px;	
+	    color:#fff;
+	    border:0px;
+	    outline: none;	
+	}

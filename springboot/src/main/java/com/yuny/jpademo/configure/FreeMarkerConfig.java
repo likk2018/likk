@@ -30,7 +30,8 @@ public class FreeMarkerConfig {
 //	}  
 
 	@Autowired  
-	protected org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer configuration;  
+	public org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer configuration;
+	
     @Autowired
     protected org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver viewResolver;  
     
@@ -39,13 +40,13 @@ public class FreeMarkerConfig {
 //    	configuration1.setTemplateConfigurations(configuration);
 //        configuration.setTemplateLoaderPath("classpath:/ftl");
 //		Map<String, Object> map = new HashMap<String, Object>();
-//		map.put("root", "spring-boot");
+//		map.put("base", "spring");
 //		configuration.setFreemarkerVariables(map);
 //		configuration.setDefaultEncoding("UTF-8");
 //		configuration.setTm
-        //configuration.setSharedVariable("content_list", new ContentListDirective());  
-        //configuration.setSharedVariable("article_list", new ArticleDirective());  
-        //configuration.setSharedVariable("channel_list", new ChannelListDirective());</span>  
+//        configuration.setSharedVariable("content_list", "11");  
+//        configuration.setSharedVariable("article_list", new ArticleDirective());  
+//        configuration.setSharedVariable("channel_list", new ChannelListDirective());</span>  
           
 //        try {  
 //        	resolver.setSetting("template_update_delay", "1");  
@@ -62,8 +63,8 @@ public class FreeMarkerConfig {
 		viewResolver.setRequestContextAttribute("request"); //为模板调用时，调用request对象的变量名</span>  
 		viewResolver.setOrder(0); 
 		viewResolver.setViewClass(MyFreemarkerView.class);
-		 Map map = viewResolver.getAttributesMap();  
-         map.put("conver", new MyConver());  
+		 Map map1 = viewResolver.getAttributesMap();  
+         map1.put("conver", new MyConver());  
         //freeMarkerResolver.setViewClass(FreeMarkerView.class);
 //		freeMarkerViewResolver.setViewNames("ftl/*");
 //		freeMarkerViewResolver.setViewClass(FreeMarkerView.class);
